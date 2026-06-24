@@ -6,9 +6,9 @@
     <title>Cisterna Inteligente - Projeto Agrinho</title>
     <style>
         :root {
-            --primary-color: #2e7d32; /* Verde agricultura */
-            --secondary-color: #0288d1; /* Azul água */
-            --background-color: #f1f8e9; /* Fundo claro/natureza */
+            --primary-color: #2e7d32; 
+            --secondary-color: #0288d1; 
+            --background-color: #f1f8e9; 
             --card-color: #ffffff;
             --text-color: #333333;
         }
@@ -33,6 +33,20 @@
             max-width: 450px;
             width: 100%;
             border-top: 8px solid var(--primary-color);
+        }
+
+        /* Estilo para as imagens ficarem certinhas no layout */
+        .banner-img {
+            display: block;
+            max-width: 120px;
+            margin: 0 auto 15px auto;
+        }
+
+        .ilustracao-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -66,12 +80,6 @@
             border-radius: 8px;
             font-size: 16px;
             box-sizing: border-box;
-            transition: border-color 0.3s;
-        }
-
-        input[type="number"]:focus {
-            border-color: var(--secondary-color);
-            outline: none;
         }
 
         button {
@@ -100,18 +108,9 @@
             display: none;
         }
 
-        .result-box h3 {
-            margin: 0 0 10px 0;
-            color: var(--secondary-color);
-        }
-
         .result-item {
             margin-bottom: 8px;
             font-size: 15px;
-        }
-
-        .result-item strong {
-            color: #004d40;
         }
 
         footer {
@@ -125,6 +124,8 @@
 <body>
 
 <div class="container">
+    <img src="img/logo-agrinho.png" alt="Logo Agrinho" class="banner-img">
+
     <h1>🌧️ Cisterna Inteligente</h1>
     <p class="subtitle">Projeto Agrinho - Tecnologia e Sustentabilidade no Campo</p>
     
@@ -135,8 +136,10 @@
 
     <div class="form-group">
         <label for="precipitacao">Média de Chuva Mensal (mm):</label>
-        <input type="number" id="precipitacao" value="160" placeholder="Clevelândia e região: 160mm">
+        <input type="number" id="precipitacao" value="160">
     </div>
+
+    <img src="img/cisterna.jpg" alt="Ilustração de Captação de Água" class="ilustracao-img">
 
     <button onclick="calcularCaptacao()">Calcular Potencial</button>
 
